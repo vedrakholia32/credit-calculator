@@ -11,7 +11,7 @@ const Subject = ({ subject }) => {
   }));
 
   return (
-    <div ref={drag} style={{ opacity: isDragging ? 0.5 : 1, padding: '5px', border: '1px solid gray', margin: '5px' }}>
+    <div ref={drag} style={{ opacity: isDragging ? 0.5 : 1, padding: '10px', border: '1px solid #ddd', margin: '5px', borderRadius: '4px', backgroundColor: '#fff' }}>
       <p>{subject.name} ({subject.credits} credits)</p>
     </div>
   );

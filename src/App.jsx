@@ -3,6 +3,7 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import SubjectList from './components/SubjectList';
 import DropArea from './components/DropArea';
+import AddSubjectForm from './components/AddSubjectForm';
 
 const App = () => {
   const [availableSubjects, setAvailableSubjects] = useState([
@@ -17,11 +18,18 @@ const App = () => {
     setAvailableSubjects((prevSubjects) => prevSubjects.filter((s) => s.id !== subject.id));
   };
 
+  const addNewSubject = (subject) => {
+    setAvailableSubjects((prevSubjects) => [...prevSubjects, subject]);
+  };
+
   return (
     <DndProvider backend={HTML5Backend}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-evenly', padding: '20px' }}>
         <DropArea addSubject={addSubject} selectedSubjects={selectedSubjects} />
-        <SubjectList subjects={availableSubjects} />
+        <div>
+          <AddSubjectForm addNewSubject={addNewSubject} />
+          <SubjectList subjects={availableSubjects} />
+        </div>
       </div>
     </DndProvider>
   );

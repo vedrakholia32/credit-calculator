@@ -1,0 +1,109 @@
+/* styles.css */
+
+/* General styling for the app */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for layout */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* DropArea styles */
+  .drop-area {
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    background-color: #fff;
+    min-height: 300px;
+  }
+  
+  .drop-area h3 {
+    margin-top: 0;
+  }
+  
+  .drop-area ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .drop-area li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .drop-area li:last-child {
+    border-bottom: none;
+  }
+  
+  .drop-area h4 {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+  
+  /* SubjectList styles */
+  .subject-list {
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    background-color: #fff;
+  }
+  
+  .subject-list h3 {
+    margin-top: 0;
+  }
+  
+  .subject-list div {
+    margin-bottom: 10px;
+    /* padding: 10px; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+  }
+  
+  .subject-list div p {
+    margin: 0;
+  }
+  
+  /* Form styles */
+  .add-subject-form {
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .add-subject-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .add-subject-form input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 20px);
+  }
+  
+  .add-subject-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-subject-form button:hover {
+    background-color: #0056b3;
+  }
+  

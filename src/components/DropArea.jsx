@@ -13,10 +13,10 @@ const DropArea = ({ addSubject, selectedSubjects }) => {
   const totalCredits = selectedSubjects.reduce((total, subject) => total + subject.credits, 0);
 
   return (
-    <div ref={drop} style={{ border: '1px solid black', padding: '10px', minHeight: '200px' }}>
+    <div ref={drop} className="drop-area">
       <h3>Your Selected Subjects</h3>
       {isOver ? 'Release to drop' : 'Drag a subject here'}
-      <ul style={{listStyleType:'none'}}>
+      <ul>
         {selectedSubjects.map((subject, index) => (
           <li key={index}>
             {subject.name} ({subject.credits} credits)

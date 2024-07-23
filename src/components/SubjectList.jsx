@@ -3,10 +3,12 @@ import Subject from './Subject';
 
 const SubjectList = ({ subjects }) => {
   return (
-    <div style={{ border: '1px solid black', padding: '10px' }}>
+    <div className="subject-list">
       <h3>Available Subjects</h3>
       {subjects.map((subject) => (
-        <Subject key={subject.id} subject={subject} />
+        <div key={subject.id}>
+          <Subject subject={subject} />
+        </div>
       ))}
     </div>
   );
