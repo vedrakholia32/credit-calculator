@@ -10,6 +10,8 @@ const DropArea = ({ addSubject, selectedSubjects }) => {
     }),
   }));
 
+  const totalCredits = selectedSubjects.reduce((total, subject) => total + subject.credits, 0);
+
   return (
     <div ref={drop} style={{ border: '1px solid black', padding: '10px', minHeight: '200px' }}>
       <h3>Your Selected Subjects</h3>
@@ -21,6 +23,7 @@ const DropArea = ({ addSubject, selectedSubjects }) => {
           </li>
         ))}
       </ul>
+      <h4>Total Credits: {totalCredits}</h4>
     </div>
   );
 };
